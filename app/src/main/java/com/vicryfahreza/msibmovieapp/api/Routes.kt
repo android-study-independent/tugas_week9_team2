@@ -1,6 +1,7 @@
 package com.vicryfahreza.msibmovieapp.api
 
-import com.vicryfahreza.msibmovieapp.response.NowPlayingResponse
+
+import NowPlayingResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

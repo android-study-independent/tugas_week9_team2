@@ -1,5 +1,8 @@
 package com.vicryfahreza.msibmovieapp.ui
 
+import MovieResponse
+import NowPlayingAdapter
+import NowPlayingListener
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vicryfahreza.msibmovieapp.api.Network
 import com.vicryfahreza.msibmovieapp.databinding.ActivityMainBinding
-import com.vicryfahreza.msibmovieapp.response.MovieResponse
-import com.vicryfahreza.msibmovieapp.ui.adapter.NowPlayingAdapter
-import com.vicryfahreza.msibmovieapp.ui.adapter.NowPlayingListener
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), NowPlayingListener {
@@ -25,12 +25,6 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
 
         val rvMain = binding.rvMain
 
-        adapter = NowPlayingAdapter(movieList, object : NowPlayingListener {
-            override fun onNowPlayingDetailClick(movieResponse: MovieResponse) {
-                Toast.makeText(this@MainActivity, "test", Toast.LENGTH_SHORT).show()
-            }
-        })
-
         adapter = NowPlayingAdapter(movieList, this)
 
         rvMain.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -45,15 +39,10 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
                 movieList.add(it)
             }
             adapter.notifyDataSetChanged()
-
-
         }
-
     }
-
 
     override fun onNowPlayingDetailClick(movieResponse: MovieResponse) {
-        Toast.makeText(this, "person ${movieResponse.title}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Title: ${movieResponse.title}", Toast.LENGTH_SHORT).show()
     }
-
 }
