@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
         }
 
         binding.btnUpComing.setOnClickListener {
-            val intent = Intent(this, UpcomingActivity::class.java)
+            val intent = Intent(this, UpcomingMovie::class.java)
             startActivity(intent)
         }
 
