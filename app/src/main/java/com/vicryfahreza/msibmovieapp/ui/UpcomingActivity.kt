@@ -4,36 +4,36 @@ import MovieResponse
 import NowPlayingAdapter
 import NowPlayingListener
 import android.content.Intent
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.vicryfahreza.msibmovieapp.R
 import com.vicryfahreza.msibmovieapp.api.Network
 import com.vicryfahreza.msibmovieapp.databinding.ActivityMainBinding
-import com.vicryfahreza.msibmovieapp.ui.detail.DetailMovieActivity
+import com.vicryfahreza.msibmovieapp.databinding.ActivityTopRatedBinding
+import com.vicryfahreza.msibmovieapp.databinding.ActivityUpcomingBinding
 import kotlinx.coroutines.launch
 
-class MainActivity : AppCompatActivity(), NowPlayingListener {
-
-    private lateinit var binding: ActivityMainBinding
+class UpcomingActivity : AppCompatActivity(), NowPlayingListener {
+    private lateinit var binding: ActivityUpcomingBinding
     private lateinit var adapter: NowPlayingAdapter
     private var movieList = mutableListOf<MovieResponse>()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityUpcomingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val rvMain = binding.rvMain
+        val rvUpComing = binding.rvUpComing
 
         adapter = NowPlayingAdapter(movieList, this)
 
-        rvMain.layoutManager = GridLayoutManager(this, 2)
-        rvMain.adapter = adapter
+        rvUpComing.layoutManager = GridLayoutManager(this, 2)
+        rvUpComing.adapter = adapter
 
         lifecycleScope.launch {
-            val result = Network.getService(this@MainActivity).getNowPlaying(
-                page = 1
+            val result = Network.getService(this@UpcomingActivity).getUpComing(
+                page = 2
             )
 
             result.results.map {
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
             }
             adapter.notifyDataSetChanged()
         }
+
 
         binding.btnTopRated.setOnClickListener {
             val intent = Intent(this, TopRatedActivity::class.java)
@@ -52,17 +53,14 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
             startActivity(intent)
         }
 
-        binding.btnUpComing.setOnClickListener {
-            val intent = Intent(this, UpcomingActivity::class.java)
+        binding.btnNowPlaying.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
     }
 
-    override fun onNowPlayingDetailClick(movie: MovieResponse) {
-        // Di sini, Anda akan memulai DetailMovieActivity saat ivMovie diklik.
-        val intent = Intent(this, DetailMovieActivity::class.java)
-        intent.putExtra("movie", movie) // Mengirim objek movie ke DetailMovieActivity
-        startActivity(intent)
+    override fun onNowPlayingDetailClick(movieResponse: MovieResponse) {
+        TODO("Not yet implemented")
     }
 }
