@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface Routes {
     @GET("movie/now_playing")
     suspend fun getNowPlaying(
-        @Query("language") lang: String = "id-ID",
+        @Query("language") lang: String = "en-EN",
         @Query("page") page: Int,
     ): NowPlayingResponse
 }

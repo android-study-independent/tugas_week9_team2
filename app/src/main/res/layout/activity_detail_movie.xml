@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="20dp"
-    tools:context=".ui.adapter.DetailMovieActivity">
+    tools:context=".ui.detail.DetailMovieActivity">
 
     <ImageView
         android:id="@+id/ivDetailMovie"

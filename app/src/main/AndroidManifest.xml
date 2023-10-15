@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MSIBMovieAPP"
         tools:targetApi="31">
         <activity
-            android:name=".ui.adapter.DetailMovieActivity"
+            android:name=".ui.detail.DetailMovieActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"

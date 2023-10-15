@@ -1,4 +1,4 @@
-package com.vicryfahreza.msibmovieapp.ui.adapter
+package com.vicryfahreza.msibmovieapp.ui.detail
 
 import MovieResponse
 import androidx.appcompat.app.AppCompatActivity
