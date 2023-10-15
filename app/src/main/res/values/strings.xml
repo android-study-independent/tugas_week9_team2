@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MSIBMovieAPP</string>
+    <string name="api_key">api_key_anda</string>
+    <string name="base_path_poster">https://image.tmdb.org/t/p/w500</string>
 </resources>
