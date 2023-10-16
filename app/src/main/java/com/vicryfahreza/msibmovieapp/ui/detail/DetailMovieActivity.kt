@@ -17,11 +17,11 @@ class DetailMovieActivity : AppCompatActivity() {
 
         if (movie != null) {
             val urlImage = "https://image.tmdb.org/t/p/w500/${movie.posterPath}"
-
             val tvTitle = findViewById<TextView>(R.id.tvTitle)
             val tvDescription = findViewById<TextView>(R.id.tvDescription)
             val tvRating = findViewById<TextView>(R.id.tvRating)
             val ivDetailMovie = findViewById<ImageView>(R.id.ivDetailMovie)
+
 
             tvTitle.text = movie.title
             tvDescription.text = movie.overview
