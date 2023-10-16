@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.UpcomingActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMain"
+        android:id="@+id/rvUpComing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/btnPopular"
@@ -16,10 +16,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnTopRated"
+        android:id="@+id/btnNowPlaying"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TopRated"
+        android:text="Now Playing"
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,18 +31,16 @@
         android:text="Popular"
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnUpComing"
-        app:layout_constraintStart_toEndOf="@+id/btnTopRated" />
+        app:layout_constraintEnd_toStartOf="@+id/btnTopRated"
+        app:layout_constraintStart_toEndOf="@+id/btnNowPlaying" />
 
     <Button
-        android:id="@+id/btnUpComing"
+        android:id="@+id/btnTopRated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UpComing"
+        android:text="Top Rated"
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
