@@ -4,7 +4,7 @@ package com.vicryfahreza.msibmovieapp.api
 import NowPlayingResponse
 import com.vicryfahreza.msibmovieapp.response.PopularResponse
 import com.vicryfahreza.msibmovieapp.response.TopRatedResponse
-import com.vicryfahreza.msibmovieapp.response.UpComingResponse
+import com.vicryfahreza.msibmovieapp.response.UpcomingResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -22,10 +22,10 @@ interface Routes {
     ): TopRatedResponse
 
     @GET("movie/upcoming")
-    suspend fun getUpComing(
+    suspend fun getUpcoming(
         @Query("language") lang: String = "en-EN",
-        @Query("page") page: Int,
-    ): UpComingResponse
+        @Query("page") page: Int
+    ): UpcomingResponse
 
     @GET("movie/popular")
     suspend fun getPopular(
