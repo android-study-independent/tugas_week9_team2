@@ -13,18 +13,18 @@
             android:layout_width="80dp"
             android:layout_height="120dp"
             android:id="@+id/imgUpComing"/>
-        
+
         <TextView
 
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/txtTitleMovie"
-            android:layout_toRightOf="@id/imgUpComing"
-            android:text="Title Poster"
+            android:layout_width="210dp"
+            android:layout_height="39dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imgUpComing"
+            android:text="Title Poster"
             android:textSize="14sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -67,13 +67,14 @@
             android:layout_marginLeft="4dp"/>
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
             android:id="@+id/imgViewDetails"
-            android:src="@drawable/baseline_arrow_forward_ios_24"
+            android:layout_width="38dp"
+            android:layout_height="36dp"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="46dp"
             android:layout_marginRight="44dp"
-            android:layout_marginTop="15dp"/>
+            android:src="@drawable/baseline_arrow_forward_ios_24" />
 
         <TextView
             android:layout_width="wrap_content"
