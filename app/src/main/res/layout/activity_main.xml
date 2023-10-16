@@ -20,16 +20,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TopRated"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/rvMain" />
 
     <Button
         android:id="@+id/btnPopular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Popular"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnUpComing"
         app:layout_constraintStart_toEndOf="@+id/btnTopRated" />
@@ -39,7 +37,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UpComing"
-        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

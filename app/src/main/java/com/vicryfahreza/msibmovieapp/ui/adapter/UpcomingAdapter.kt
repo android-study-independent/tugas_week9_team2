@@ -62,4 +62,5 @@ class UpcomingAdapter (private val listUpcoming: List<UpcomingMovieResponse>) : 
     private fun buildPosterUpcoming(posterPath: String?): String {
         return "https://image.tmdb.org/t/p/w500/$posterPath"
     }
+
 }

@@ -25,7 +25,7 @@ class DetailMovieActivity : AppCompatActivity() {
 
             tvTitle.text = movie.title
             tvDescription.text = movie.overview
-            tvRating.text = "Rating: ${movie.voteAverage}"
+            tvRating.text = "${movie.voteAverage}"
 
             Picasso.get().load(urlImage).into(ivDetailMovie)
         }

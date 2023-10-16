@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.vicryfahreza.msibmovieapp.api.Network
 import com.vicryfahreza.msibmovieapp.databinding.ActivityTopRatedBinding
+import com.vicryfahreza.msibmovieapp.ui.detail.DetailMovieActivity
 import kotlinx.coroutines.launch
 
 class TopRatedActivity : AppCompatActivity(), NowPlayingListener {
@@ -57,7 +58,9 @@ class TopRatedActivity : AppCompatActivity(), NowPlayingListener {
 
     }
 
-    override fun onNowPlayingDetailClick(movieResponse: MovieResponse) {
-        TODO("Not yet implemented")
+    override fun onNowPlayingDetailClick(movie: MovieResponse) {
+            val intent = Intent(this, DetailMovieActivity::class.java)
+        intent.putExtra("movie", movie) // Mengirim objek movie ke DetailMovieActivity
+        startActivity(intent)
     }
 }

@@ -12,6 +12,7 @@ import com.vicryfahreza.msibmovieapp.R
 import com.vicryfahreza.msibmovieapp.api.Network
 import com.vicryfahreza.msibmovieapp.databinding.ActivityMainBinding
 import com.vicryfahreza.msibmovieapp.databinding.ActivityPopularBinding
+import com.vicryfahreza.msibmovieapp.ui.detail.DetailMovieActivity
 import kotlinx.coroutines.launch
 
 class PopularActivity : AppCompatActivity(), NowPlayingListener {
@@ -61,8 +62,12 @@ class PopularActivity : AppCompatActivity(), NowPlayingListener {
 
     }
 
-    override fun onNowPlayingDetailClick(movieResponse: MovieResponse) {
+    override fun onNowPlayingDetailClick(movie: MovieResponse) {
 
+        // Di sini, Anda akan memulai DetailMovieActivity saat ivMovie diklik.
+        val intent = Intent(this, DetailMovieActivity::class.java)
+        intent.putExtra("movie", movie) // Mengirim objek movie ke DetailMovieActivity
+        startActivity(intent)
     }
 
 

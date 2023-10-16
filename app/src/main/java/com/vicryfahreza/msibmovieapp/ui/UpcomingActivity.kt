@@ -1,5 +1,6 @@
 package com.vicryfahreza.msibmovieapp.ui
 
+import MovieResponse
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,5 +67,12 @@ class UpcomingActivity : AppCompatActivity() {
 
             adapter.notifyDataSetChanged()
         }
+    }
+    fun onNowPlayingDetailClick(movie: MovieResponse) {
+
+        // Di sini, Anda akan memulai DetailMovieActivity saat ivMovie diklik.
+        val intent = Intent(this, DetailMovieActivity::class.java)
+        intent.putExtra("movie", movie) // Mengirim objek movie ke DetailMovieActivity
+        startActivity(intent)
     }
 }
