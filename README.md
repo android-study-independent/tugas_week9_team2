@@ -5,4 +5,4 @@ Nama Kelompok Tim 2
 -Vicry Fahreza
 -Riski Alek Syaputra Sinaga
 -Tias Hafidzotul Luthfiana
--Agung
+-Annisayyid Sharimsyah
