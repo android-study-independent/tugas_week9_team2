@@ -7,6 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/relativeItem">
 
         <ImageView
@@ -46,7 +47,10 @@
             android:layout_below="@id/txtTitleMovie"
             android:layout_marginTop="4dp"
             android:text="Overview"
-            android:layout_marginLeft="4dp"/>
+            android:layout_marginLeft="4dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            />
 
         <TextView
             android:layout_width="wrap_content"
