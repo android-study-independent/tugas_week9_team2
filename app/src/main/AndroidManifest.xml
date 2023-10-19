@@ -15,6 +15,24 @@
         android:theme="@style/Theme.MSIBMovieAPP"
         tools:targetApi="31">
         <activity
+            android:name=".firebasedemo.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firebasedemo.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firebasedemo.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".firebasedemo.GetStartedActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.UpcomingActivity"
             android:exported="false" />
         <activity
@@ -28,13 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
     </application>
 
 </manifest>
