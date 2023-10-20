@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "120916008786",
+    "firebase_url": "https://movie-tmdb-firebase-default-rtdb.firebaseio.com",
+    "project_id": "movie-tmdb-firebase",
+    "storage_bucket": "movie-tmdb-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120916008786:android:d7b2e3217ae0fd8ffe648b",
+        "android_client_info": {
+          "package_name": "com.vicryfahreza.msibmovieapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD09xvrpIoizwFXapLnO3Ed2N9O0zGB6H8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
