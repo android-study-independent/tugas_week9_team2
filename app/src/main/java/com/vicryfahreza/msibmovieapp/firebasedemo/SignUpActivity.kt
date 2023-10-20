@@ -36,8 +36,10 @@ class SignUpActivity : BaseActivity() {
                         startActivity(Intent(this,MainActivity::class.java))
                         finish()
                     }
-                    showToast(this, "User is not created. Try again later")
-                    hideProgressBar()
+                    else {
+                        showToast(this, "User is not created. Try again later")
+                        hideProgressBar()
+                    }
                 }
         }
     }
