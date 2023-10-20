@@ -46,7 +46,7 @@ class SignUpActivity : BaseActivity() {
         return when {
             TextUtils.isEmpty(name)->{
                 binding?.tilName?.error = "Enter name"
-                    false
+                false
             }
             TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()-> {
                 binding?.tilEmail?.error = "Enter valid email addres"
