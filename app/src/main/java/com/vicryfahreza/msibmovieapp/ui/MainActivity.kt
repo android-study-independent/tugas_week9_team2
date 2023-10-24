@@ -73,6 +73,12 @@ class MainActivity : AppCompatActivity(), NowPlayingListener {
         binding.btnLogout.setOnClickListener {
             signOut()
         }
+
+        binding.fabFavorite.setOnClickListener {
+            val intent = Intent(this, FavoriteActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun signOut() {
