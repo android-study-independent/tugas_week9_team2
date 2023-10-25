@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "120916008786",
+    "firebase_url": "https://movie-tmdb-firebase-default-rtdb.firebaseio.com",
+    "project_id": "movie-tmdb-firebase",
+    "storage_bucket": "movie-tmdb-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120916008786:android:d7b2e3217ae0fd8ffe648b",
+        "android_client_info": {
+          "package_name": "com.vicryfahreza.msibmovieapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120916008786-ds2oh1l295nj7cf11vlj6bgof9ru06mo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vicryfahreza.msibmovieapp",
+            "certificate_hash": "bb7173e029d88c0a67b6bddcdc25735c002eb70e"
+          }
+        },
+        {
+          "client_id": "120916008786-qrtipvotssdds4ca7i34b0hbfurn80bf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vicryfahreza.msibmovieapp",
+            "certificate_hash": "70c248bf43b2f946a96cc754b8090a9708dbaece"
+          }
+        },
+        {
+          "client_id": "120916008786-ttj9gv2rdvj0c8dtjo3hgj5otfcucg9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vicryfahreza.msibmovieapp",
+            "certificate_hash": "77ff944d7099edc00bbbed339591cabcf8a17810"
+          }
+        },
+        {
+          "client_id": "120916008786-uk2fii6ha13a4s72qhho0h2j4oan4lc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vicryfahreza.msibmovieapp",
+            "certificate_hash": "e6460855882a622fbe5245a305f65c8fe91d3f54"
+          }
+        },
+        {
+          "client_id": "120916008786-sldpbo7c8o32nlvsb9jvr2k0p2siukgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD09xvrpIoizwFXapLnO3Ed2N9O0zGB6H8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120916008786-sldpbo7c8o32nlvsb9jvr2k0p2siukgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
