@@ -4,4 +4,5 @@
     <string name="forgot_password_msg">Don\'t worry! it happens. Please enter the email address associated with your account.</string>
     <string name="on_submit_msg">Check out your mailbox, you will receive an email containing link where you can reset your password</string>
     <string name="web_client_id">120916008786-ds2oh1l295nj7cf11vlj6bgof9ru06mo.apps.googleusercontent.com</string>
+    <string name="default_web_client_id" />
 </resources>
