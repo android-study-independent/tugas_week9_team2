@@ -65,7 +65,7 @@ class FavoriteActivity : AppCompatActivity(), FavoriteItemListener {
                 }
             }
 
-            // Pelacakan kejadian "favorite_activity_opened"
+            // Pelacakan "favorite_activity_opened"
             logEvent("favorite_activity_opened")
         }
     }
