@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.Timestamp
+import com.google.firebase.analytics.FirebaseAnalytics  // Import Firebase Analytics
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -20,11 +21,15 @@ class FavoriteActivity : AppCompatActivity(), FavoriteItemListener {
     private val listFavorite = mutableListOf<Favorite>()
     private val adapter = GroupieAdapter()
     private lateinit var binding : ActivityFavoriteBinding
+    private lateinit var firebaseAnalytics: FirebaseAnalytics  // Inisialisasi Firebase Analytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inisialisasi Firebase Analytics
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
         val rvFavorite = binding.rvFavorite
         rvFavorite.layoutManager = LinearLayoutManager(this)
@@ -59,8 +64,17 @@ class FavoriteActivity : AppCompatActivity(), FavoriteItemListener {
                     adapter.add(FavoriteAdapter(fav, this))
                 }
             }
-        }
 
+            // Pelacakan kejadian "favorite_activity_opened"
+            logEvent("favorite_activity_opened")
+        }
+    }
+
+    // Fungsi untuk melakukan pelacakan kejadian
+    private fun logEvent(eventName: String) {
+        val bundle = Bundle()
+        bundle.putString("event_name", eventName)
+        firebaseAnalytics.logEvent(eventName, bundle)
     }
 
     companion object {
@@ -86,5 +100,4 @@ class FavoriteActivity : AppCompatActivity(), FavoriteItemListener {
                 }
         }
     }
-
 }
